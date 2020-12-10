@@ -1,0 +1,17 @@
+[package]
+name = "intercom_flasher"
+version = "0.1.0"
+authors = ["Andrey Kruglov <kruglov.it@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[dependencies.gtk]
+version = "0.9.2"
+features = ["v3_16"]
+
+[dependencies.gio]
+version = "0.9.1"
+features = ["v2_44"]

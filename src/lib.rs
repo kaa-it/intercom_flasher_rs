@@ -6,6 +6,8 @@ use gio::prelude::*;
 
 use gtk::{ApplicationWindow, Button, Orientation};
 
+mod usb;
+
 pub struct Application {
     app: gtk::Application
 }
@@ -38,10 +40,12 @@ impl Application {
         let container = gtk::Box::new(Orientation::Vertical, 5);
 
         let disks_label = gtk::Label::new(Some("Диски"));
+        disks_label.set_halign(gtk::Align::Start);
+
         let disks = gtk::ComboBox::new();
 
         container.pack_start(&disks_label, false, false, 5);
-        container.pack_start(&disks, true, false, 5);
+        container.pack_start(&disks, false, false, 5);
 
 
         let button = Button::with_label("Click me!");
